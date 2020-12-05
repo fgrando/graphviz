@@ -1,0 +1,27 @@
+digraph CarsGraph {
+
+    // separation space among boxes
+    ranksep=0.1;
+
+    // orthogonal connections
+    splines=ortho
+
+    // adjust box shape here:
+    node[shape=box3d width=1.8 height=0.6 fontname="Arial"];
+
+    // the nodes to draw
+    Cars [ label = "Cars" style="filled" fillcolor=lightblue ];
+        node[shape=box3d width=2.0 height=0.2 fontname="Arial" fontsize=10];
+        Audi [ label = "Audi" ];
+        BMW [ label = "BMW" ];
+
+    // clean up to start drawing the connections. Nodes called (without definition) will be invisible.
+    node[shape=none, width=0, height=0, label=""];
+    edge[dir=none];
+
+    // connections
+
+    Cars -> car1 -> car2;
+        {rank=same; car1 -> Audi;}
+        {rank=same; car2 -> BMW;}
+}

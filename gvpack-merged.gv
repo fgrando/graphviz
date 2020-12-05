@@ -1,0 +1,309 @@
+digraph root {
+	graph [ranksep=0.1,
+		splines=ortho
+	];
+	node [fontname=Arial,
+		height=0,
+		shape=none,
+		width=0
+	];
+	edge [dir=none];
+	subgraph CarsGraph {
+		graph [rank="",
+			ranksep=0.1,
+			splines=ortho
+		];
+		node [fillcolor="",
+			fontname=Arial,
+			fontsize=10,
+			height=0,
+			label="",
+			shape=none,
+			style="",
+			width=0
+		];
+		edge [dir=none];
+		{
+			graph [rank=same,
+				ranksep=0.1,
+				splines=ortho
+			];
+			node [fillcolor="",
+				fontname=Arial,
+				fontsize=10,
+				height=0,
+				label="",
+				shape=none,
+				style="",
+				width=0
+			];
+			edge [dir=none];
+			Audi	[height=0.2,
+				label=Audi,
+				shape=box3d,
+				width=2.0];
+			car1;
+			car1 -> Audi;
+		}
+		{
+			graph [rank=same,
+				ranksep=0.1,
+				splines=ortho
+			];
+			node [fillcolor="",
+				fontname=Arial,
+				fontsize=10,
+				height=0,
+				label="",
+				shape=none,
+				style="",
+				width=0
+			];
+			edge [dir=none];
+			BMW	[height=0.2,
+				label=BMW,
+				shape=box3d,
+				width=2.0];
+			car2;
+			car2 -> BMW;
+		}
+		Cars	[fillcolor=lightblue,
+			fontsize="",
+			height=0.6,
+			label=Cars,
+			shape=box3d,
+			style=filled,
+			width=1.8];
+		Cars -> car1;
+		car1 -> car2;
+	}
+	subgraph MotorcyclesGraph {
+		graph [rank="",
+			ranksep=0.1,
+			splines=ortho
+		];
+		node [fillcolor="",
+			fontname=Arial,
+			fontsize=10,
+			height=0,
+			label="",
+			shape=none,
+			style="",
+			width=0
+		];
+		edge [dir=none];
+		{
+			graph [rank=same,
+				ranksep=0.1,
+				splines=ortho
+			];
+			node [fillcolor="",
+				fontname=Arial,
+				fontsize=10,
+				height=0,
+				label="",
+				shape=none,
+				style="",
+				width=0
+			];
+			edge [dir=none];
+			Honda	[height=0.2,
+				label=Honda,
+				shape=box3d,
+				width=2.0];
+			moto0;
+			moto0 -> Honda;
+		}
+		{
+			graph [rank=same,
+				ranksep=0.1,
+				splines=ortho
+			];
+			node [fillcolor="",
+				fontname=Arial,
+				fontsize=10,
+				height=0,
+				label="",
+				shape=none,
+				style="",
+				width=0
+			];
+			edge [dir=none];
+			Yamaha	[height=0.2,
+				label=Yamaha,
+				shape=box3d,
+				width=2.0];
+			moto1;
+			moto1 -> Yamaha;
+		}
+		{
+			graph [rank=same,
+				ranksep=0.1,
+				splines=ortho
+			];
+			node [fillcolor="",
+				fontname=Arial,
+				fontsize=10,
+				height=0,
+				label="",
+				shape=none,
+				style="",
+				width=0
+			];
+			edge [dir=none];
+			Suzuki	[height=0.2,
+				label=Suzuki,
+				shape=box3d,
+				width=2.0];
+			moto2;
+			moto2 -> Suzuki;
+		}
+		{
+			graph [rank=same,
+				ranksep=0.1,
+				splines=ortho
+			];
+			node [fillcolor="",
+				fontname=Arial,
+				fontsize=10,
+				height=0,
+				label="",
+				shape=none,
+				style="",
+				width=0
+			];
+			edge [dir=none];
+			BMW_gv1	[height=0.2,
+				label=BMW,
+				shape=box3d,
+				width=2.0];
+			moto3;
+			moto3 -> BMW_gv1;
+		}
+		Motorcycles	[fillcolor=lightblue,
+			fontsize="",
+			height=0.6,
+			label=Motorcycles,
+			shape=box3d,
+			style=filled,
+			width=1.8];
+		Motorcycles -> moto0;
+		moto0 -> moto1;
+		moto1 -> moto2;
+		moto2 -> moto3;
+	}
+	subgraph TrucksGraph {
+		graph [rank="",
+			ranksep=0.1,
+			splines=ortho
+		];
+		node [fillcolor="",
+			fontname=Arial,
+			fontsize=10,
+			height=0,
+			label="",
+			shape=none,
+			style="",
+			width=0
+		];
+		edge [dir=none];
+		{
+			graph [rank=same,
+				ranksep=0.1,
+				splines=ortho
+			];
+			node [fillcolor="",
+				fontname=Arial,
+				fontsize=10,
+				height=0,
+				label="",
+				shape=none,
+				style="",
+				width=0
+			];
+			edge [dir=none];
+			Scania	[height=0.2,
+				label=Scania,
+				shape=box3d,
+				width=2.0];
+			trunk0;
+			trunk0 -> Scania;
+		}
+		{
+			graph [rank=same,
+				ranksep=0.1,
+				splines=ortho
+			];
+			node [fillcolor="",
+				fontname=Arial,
+				fontsize=10,
+				height=0,
+				label="",
+				shape=none,
+				style="",
+				width=0
+			];
+			edge [dir=none];
+			MercedesBenz	[height=0.2,
+				label="Mercedes-Benz",
+				shape=box3d,
+				width=2.0];
+			trunk1;
+			trunk1 -> MercedesBenz;
+		}
+		Trucks	[fillcolor=lightblue,
+			fontsize="",
+			height=0.6,
+			label=Trucks,
+			shape=box3d,
+			style=filled,
+			width=1.8];
+		Trucks -> trunk0;
+		trunk0 -> trunk1;
+	}
+	subgraph GVpackMerge {
+		graph [rank="",
+			ranksep=0.1,
+			splines=ortho
+		];
+		node [fontname=Arial,
+			height=0,
+			label="",
+			shape=none,
+			width=0
+		];
+		edge [dir=none];
+		{
+			graph [rank=same,
+				ranksep=0.1,
+				splines=ortho
+			];
+			node [fontname=Arial,
+				height=0,
+				label="",
+				shape=none,
+				width=0
+			];
+			edge [dir=none];
+			Road	[height=0.6,
+				label="Paved roads",
+				shape=box3d,
+				width=1.8];
+			n0 -> Road;
+		}
+		ROOT	[height=0.6,
+			label=Transport,
+			shape=box3d,
+			width=1.8];
+		Ground	[height=0.6,
+			label=Ground,
+			shape=box3d,
+			width=1.8];
+		ROOT -> Ground;
+		Ground -> n0;
+		Road -> r0;
+		r0 -> Cars_gv1;
+		r0 -> Motorcycles_gv1;
+		r0 -> Trucks_gv1;
+	}
+}

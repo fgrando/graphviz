@@ -1,0 +1,32 @@
+// Graphviz organization chart
+
+digraph MotorcyclesGraph {
+
+    // separation space among boxes:
+    ranksep=0.1;
+
+    // orthogonal connections:
+    splines=ortho
+
+    // adjust box shape here:
+    node[shape=box3d width=1.8 height=0.6 fontname="Arial"];
+
+    // the nodes to draw
+    Motorcycles [ label = "Motorcycles" style="filled" fillcolor=lightblue ];
+        node[shape=box3d width=2.0 height=0.2 fontname="Arial" fontsize=10];
+        Honda [ label = "Honda" ];
+        Yamaha [ label = "Yamaha" ];
+        Suzuki [ label = "Suzuki" ];
+        BMW [ label = "BMW" ];
+
+    // clean up to start drawing the connections. Nodes called (without definition) will be invisible.
+    node[shape=none, width=0, height=0, label=""];
+    edge[dir=none];
+
+    // connections
+    Motorcycles ->moto0 -> moto1 -> moto2 -> moto3;
+        {rank=same;  moto0 -> Honda;}
+        {rank=same;  moto1 -> Yamaha;}
+        {rank=same;  moto2 -> Suzuki;}
+        {rank=same;  moto3 -> BMW;}
+}
